@@ -43,3 +43,13 @@ def kmeans_display(X, label):
     plt.plot()
     plt.show()
 
+
+from sklearn.cluster import KMeans
+
+#Gọi số cụm và fit dữ liệu 
+kmeans = KMeans(n_clusters=5).fit(myArray)
+#Dự đoán các cụm
+label = kmeans.predict(myArray)
+#Hiển thị
+kmeans_display(myArray, label)
+
